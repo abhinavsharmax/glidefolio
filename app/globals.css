@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  body {
+    @apply bg-neutral-900 text-white overflow-hidden select-none;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+@layer utilities {
+  .glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+  }
+
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+}
+
+@layer components {
+  .book-container-responsive {
+    /* Desktop Default */
+    width: 1132px;
+    /* 800 * 0.707 * 2 */
+    height: 800px;
+  }
+
+  @media (max-width: 768px) {
+    .book-container-responsive {
+      /* Mobile Override */
+      width: 90vw;
+      /* Height = 90vw / 0.707 */
+      height: calc(90vw / 0.707);
+      max-height: 80vh;
+      max-width: calc(80vh * 0.707);
+    }
+  }
+}
