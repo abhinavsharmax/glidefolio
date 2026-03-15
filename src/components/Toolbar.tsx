@@ -105,7 +105,7 @@ export const Toolbar: React.FC = () => {
         const leftNum = currentPage;
         const rightNum = currentPage + 1;
         // Check if rightNum exceeds total?
-        // Index 21 is last. totalPages 22.
+        // Index 13 is last. totalPages 14.
         if (rightNum > totalPages) setInputPage(`${leftNum}`);
         else setInputPage(`${leftNum}-${rightNum}`);
       }
@@ -264,7 +264,7 @@ export const Toolbar: React.FC = () => {
               feel.
             </p>
             <div className="mt-3 text-xs text-neutral-500">
-              <p>Author: Antigravity</p>
+              <p>Author: Adurystal Bharat Pvt. Ltd.</p>
               <p>Version: 1.0.0</p>
               <div className="w-full h-px bg-white/10 my-3"></div>
               <Link

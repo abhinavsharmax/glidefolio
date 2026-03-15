@@ -23,9 +23,9 @@ export const BookContainer: React.FC = () => {
   // Better: Wait for mount to render complex 3D structure if it differs.
 
   // Static configuration for pages could be moved outside or memoized with empty deps.
-  // Since totalImages is constant 22, we can generate this once.
+  // Since totalImages is constant 14, we can generate this once.
   const pages = useMemo(() => {
-    const totalImages = 22;
+    const totalImages = 14;
     const generatedPages = [];
 
     for (let i = 0; i < totalImages; i++) {
